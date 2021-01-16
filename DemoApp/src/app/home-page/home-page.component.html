@@ -1,0 +1,103 @@
+<div>
+    <div class="carousel slide" id="myCarousel">
+        <ol class="carousel-indicators" id="myCarousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="back-img" src="../../assets/images/image3.jpg" alt="">
+                <div>
+                    <app-header></app-header>
+                    <div class="header container p-4">
+                        <h1 class="py-3">I'm looking for..</h1>
+                        <form [formGroup]="profileForm">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control" type="text" placeholder="Enter a Job Description">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="w-50  h-100" type="button">Search</button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 py-4">
+                                    <div class="form-check form-check-inline ">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Full Time</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">Part
+                                            Time/Casual/Freelance</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 py-3">
+                                    <select class="form-control">
+                                        <option value=" " disabled selected>Select your Location</option>
+                                    </select>
+                                    <div class="reg py-5">
+                                       
+                                        <button (click)="onRegisterClick()" class="btn btn-success px-5 py-2">Register</button>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="back-color">
+        <div class="container py-5 class cont">
+            <p class="setting">We're leaders in </p>
+            <h1>Creative Digital Recruitment</h1>
+            <p>Based in Surry Hills,the creative hub of Sydney we are surrounded by creativity
+                and that reflects on the type of jobs we recuit for.
+            </p>
+            <button class="">FIND OUT MORE ABOUT US!</button>
+
+        </div>
+        <div class="py-5">
+            <app-footer></app-footer>
+        </div>
+        <div class="py-4">
+            <div class="container">
+                <i class="fa fa-envelope fa-lg mx-2" aria-hidden="true"></i>
+                <input type="text">
+                <div class="row">
+                    <div class="py-2 col-md-6">
+                        <small>Copyright &copy;2021 Two Bytes Consulting.<strong>Terms & Policies.</strong></small>
+                    </div>
+                    <div class="col-md-6">
+
+
+                        <span class="px-2">
+                            <button type="button" class="btn btn-primary">
+                                <a><i class="fas fa-twitter" aria-hidden="true"></i></a>
+                                Tweet <span class="badge badge-light">9</span>
+                                <span class="sr-only">unread messages</span>
+                            </button>
+
+                        </span>
+                        <span class="px-2">
+                            <button type="button" class="btn btn-primary">
+                                <a><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                Like <span class="badge badge-light">9</span>
+                                <span class="sr-only">unread messages</span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

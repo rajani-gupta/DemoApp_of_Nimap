@@ -1,0 +1,22 @@
+<div class=" bg-primary">
+    <app-header></app-header>
+</div>
+<div class="p-5  row">
+    <div class="col-md-6 p-5"></div>
+    <div class="col-md-6 p-5">
+        <span *ngFor="let profile of getProfileData">
+            <p>I'm {{profile.first_name}} {{profile.last_name}} and I'm above {{profile.age}} years and you can send 
+                your emails to <strong class="text-primary">{{profile.email}}</strong>.I live in the state of {{profile.state}}.I like to play {{profile.tags}}.
+                And please send me newsletters .Please reach out to me on my phone number.
+    
+            </p>
+        </span>
+        <button type="submit" class="btn btn-success">I Agree</button>
+    
+    
+    </div>
+</div>
+<div>
+    <app-footer></app-footer>
+</div>
+

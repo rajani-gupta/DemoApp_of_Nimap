@@ -1,0 +1,42 @@
+.back-img{
+    width: 100%;
+    height: 35em !important;
+    position: absolute;
+}
+
+.home{
+    color: red;
+}
+
+.form-check-label{
+    color: white;
+}
+.reg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#myCarousel-indicators > li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #bbbbbb;
+  }
+ .setting{
+     font-size: 1.5rem;
+     font-style: italic;
+     /* margin-top: 2rem; */
+ }
+ .cont{
+    text-align: center;
+ }
+ .back-color{
+     background-color: lightgrey;
+ }
+ .fa-envelope{
+     color: blue;
+ }
+ .color{
+     color: blue;
+ }

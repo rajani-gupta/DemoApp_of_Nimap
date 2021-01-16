@@ -1,0 +1,7 @@
+.header{
+    position: relative;
+   
+}
+.navpage{
+    flex-flow: row-reverse;
+}

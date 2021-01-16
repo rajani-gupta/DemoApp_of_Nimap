@@ -1,0 +1,81 @@
+
+<form [formGroup]="profileForm" class="container" >
+    <div class="row">
+        <div class="col-md-6">
+        <input class="form-control" type="file" accept="image/*" (change)="showPreview($event)" />
+        <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+            <img [src]="imageURL" [alt]="profileForm.value.name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3 py-2">
+                    <input type="text" formControlName="first_name" placeholder="First name">
+                </div>
+                <div class="col-md-3 py-2">
+                    <input type="text" formControlName="last_name" placeholder="Last name">
+                </div>
+            </div>
+            <div>
+                <input type="text" formControlName="email" placeholder="Email">
+            </div>
+            <div>
+                <input type="text" formControlName="contact" placeholder="(541) 754-3010">
+            </div>
+            <div>
+                <select formControlName="age">
+                    <option value="" disabled selected>Select age</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                </select>
+            </div>
+            <div>
+                <select formControlName="state">
+                    <option value="" disabled selected>State</option>
+                    <option value="UP">UP</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Mah">Maharashtra</option>
+                </select>
+            </div>
+            <div>
+                <select formControlName="country">
+                    <option value="" disabled selected>Country</option>
+                    <option value="India">India</option>
+                    <option value="India">India</option>
+                    <option value="India">India</option>
+                </select>
+            </div>
+            <div>
+                <select formControlName="address" placeholder="address" (change)="onHandleChange($event)">
+                    <option value="" disabled selected>Address</option>
+                    <option value="Home">Home</option>
+                    <option value="Company">Company</option>
+                </select>
+            </div>
+            <div *ngIf="isHome">
+                <input type="text" placeholder="address 1" formControlName="address1">
+                <input type="text" placeholder="address 2" formControlName="address2">
+            </div>
+            <div *ngIf="isCompany">
+                <input type="text" placeholder="Company address 1" formControlName="address1">
+                <input type="text" placeholder="Company address 2" formControlName="address2">
+            </div>
+            <div>
+                <input type="text" formControlName="tags" placeholder="tags">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="isChecked">
+                <label class="form-check-label" for="exampleCheck1">subscribe to newsletter</label>
+            </div>
+            <button type="button" class="btn btn-light">Cancel</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid" (click)="onSubmit()">Submit</button>
+        </div>
+        
+       
+    </div>
+
+
+
+</form>
